@@ -23,4 +23,12 @@ export class PrismaFilesRepository implements FilesRepository {
   async findMany(): Promise<File[]> {
     return await this.prismaService.file.findMany();
   }
+
+  async findManyByTaskId(id: string): Promise<File[]> {
+    return await this.prismaService.file.findMany({
+      where: {
+        taskId: id,
+      },
+    });
+  }
 }

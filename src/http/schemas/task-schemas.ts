@@ -41,6 +41,10 @@ const downloadFileParamSchema = z.object({
   id: z.string().uuid(),
 });
 
+const listFilesByTaskParamSchema = z.object({
+  id: z.string().uuid(),
+});
+
 type CreateTaskBodySchema = z.infer<typeof createTaskBodySchema>;
 type UpdateTaskParamSchema = z.infer<typeof updateTaskParamSchema>;
 type UpdateTaskBodySchema = z.infer<typeof updateTaskBodySchema>;
@@ -48,6 +52,7 @@ type DeleteTaskParamSchema = z.infer<typeof deleteTaskParamSchema>;
 type GetTaskByIdParamSchema = z.infer<typeof getTaskByIdParamSchema>;
 type UploadFileParamSchema = z.infer<typeof uploadFileParamSchema>;
 type DownloadFileParamSchema = z.infer<typeof downloadFileParamSchema>;
+type ListFilesByTaskParamSchema = z.infer<typeof listFilesByTaskParamSchema>;
 
 export {
   createTaskBodySchema,
@@ -57,6 +62,7 @@ export {
   getTaskByIdParamSchema,
   uploadFileParamSchema,
   downloadFileParamSchema,
+  listFilesByTaskParamSchema,
   CreateTaskBodySchema,
   UpdateTaskParamSchema,
   UpdateTaskBodySchema,
@@ -64,4 +70,5 @@ export {
   GetTaskByIdParamSchema,
   UploadFileParamSchema,
   DownloadFileParamSchema,
+  ListFilesByTaskParamSchema,
 };
