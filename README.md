@@ -113,6 +113,13 @@
   - O tamanho máximo do arquivo é de 100MB.
   - A rota aceita somente arquivos enviados como `multipart/form-data`.
 
+#### Listar Todas os Arquivos
+- **URL**: `/tasks/:id/files`
+- **Método**: GET
+- **Código de Status**: 200
+- **Resposta**:
+  - Retorna um array com todos os arquivos.
+
 #### Download de Arquivo
 - **URL**: `/files/:id`
 - **Método**: GET
